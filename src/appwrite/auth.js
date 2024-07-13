@@ -44,7 +44,7 @@ class appwriteAuth{
         try {
             return await this.account.get() 
         } catch (error) {
-            return error
+            return false
         }
     }
     async logout(){
