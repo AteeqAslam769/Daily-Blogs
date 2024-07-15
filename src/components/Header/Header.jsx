@@ -20,7 +20,7 @@ function Header() {
             <nav className="container mx-auto flex items-center justify-between px-4">
                 <div className="flex items-center">
                     <NavLink to="/">
-                        <Logo className="ml-2 w-52" />
+                        <Logo className="ml-2 w-44 md:w-52" />
                     </NavLink>
                 </div>
 
