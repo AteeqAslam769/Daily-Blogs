@@ -37,7 +37,7 @@ function PostForm({ post }) {
         } else {
             const file = data.image[0] ? await blogOperations.uploadfile(data.image[0]) : null;
             if (file) {
-                const dbPost = await blogOperations.createBlog({ ...data, featuredImage: file?.$id, userId: userData.$id });
+                const dbPost = await blogOperations.createBlog({ ...data,slug:data.slug.substring(0, 34), featuredImage: file?.$id, userId: userData.$id });
                 setLoading(false)
                 dbPost && navigate(`/post/${dbPost.$id}`);
             }
