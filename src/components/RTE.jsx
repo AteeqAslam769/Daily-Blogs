@@ -8,7 +8,7 @@ function RTE({ name, label, control, defaultValue }) {
 
     useEffect(() => {
         // Set a timeout in case onInit doesn't fire as expected
-        const timer = setTimeout(() => setLoading(false), 3000);
+        const timer = setTimeout(() => setLoading(false), 5000);
         return () => clearTimeout(timer);
     }, []);
 
