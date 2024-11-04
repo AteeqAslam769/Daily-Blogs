@@ -3,7 +3,7 @@ import {Container,PostForm} from '../components'
 
 function AddPost() {
     return (
-        <div>
+        <div className='bg-gray-300'>
             <Container>
                 <PostForm/>
             </Container>

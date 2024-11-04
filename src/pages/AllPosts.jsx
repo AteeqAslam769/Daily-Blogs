@@ -18,7 +18,7 @@ function AllPosts() {
 
     if (posts.length !== 0) {
         return (
-            <div className="w-full px-2">
+            <div className="w-full px-2 bg-gray-200">
                 <Container>
                     <div className="flex flex-wrap -mx-2">
                         {posts.map((post) => (

@@ -27,7 +27,7 @@ function Home() {
 
     if (!user) {
         return (
-            <div className="w-full py-60 mt-4 text-center">
+            <div className=" py-60  text-center bg-gray-200">
                 <Container>
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
@@ -43,7 +43,7 @@ function Home() {
 
     if (user && posts.length !== 0) {
         return (
-            <div className="w-full py-6 px-2">
+            <div className="w-full py-6 px-2 bg-gray-200">
                 <Container>
                     <div className="flex flex-wrap -mx-2">
                         {posts.map((post) => (
@@ -59,7 +59,7 @@ function Home() {
 
     if (user && posts.length === 0) {
         return (
-            <div className="w-full text-center">
+            <div className=" text-center bg-gray-200">
                 <Container>
                     <div className="flex flex-wrap w-full py-60">
                         <div className="p-2 w-full">

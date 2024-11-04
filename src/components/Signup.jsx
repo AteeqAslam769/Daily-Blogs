@@ -32,9 +32,9 @@ function Signup() {
     return (
         loading?<Loader/>:
         <div className="flex items-center justify-center min-h-screen">
-            <div className="w-full max-w-md p-8 rounded-lg shadow-2xl">
+            <div className="w-96 max-w-md p-8 rounded-lg shadow-2xl bg-white">
                 <div className="flex justify-center">
-                    <Logo className="w-24" />
+                    <Logo className="w-36 mb-6" />
                 </div>
                 <h2 className="text-2xl font-bold text-center text-gray-800">Sign up to create account</h2>
                 <p className="mt-2 text-center text-gray-600">

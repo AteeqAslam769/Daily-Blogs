@@ -75,7 +75,7 @@ function PostForm({ post }) {
 
     return (
         loading?<Loader/>:
-        <form onSubmit={handleSubmit(submit)} className="flex flex-wrap mt-6">
+        <form onSubmit={handleSubmit(submit)} className="flex flex-wrap pt-6 pb-10">
             <div className="w-full md:w-2/3 px-2">
                 <Input
                     label="Title :"

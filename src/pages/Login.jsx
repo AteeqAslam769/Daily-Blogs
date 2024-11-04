@@ -3,7 +3,7 @@ import {Login as LoginComponent} from '../components'
 
 function Login() {
     return (
-        <div>
+        <div className='bg-gray-200'>
             <LoginComponent/>
         </div>
     )

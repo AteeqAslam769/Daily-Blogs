@@ -5,7 +5,7 @@ import { blogOperations } from '../appwrite/config';
 function PostCard({ $id, title, featuredImage }) {
     return (
         <Link to={`/post/${$id}`} className="w-full p-4 flex flex-col h-full">
-            <div className="bg-gray-100 shadow-md border border-gray-200 rounded-md hover:shadow-lg transition-shadow duration-200 flex flex-col h-full">
+            <div className="bg-white shadow-md border border-gray-200 rounded-md hover:shadow-lg transition-shadow duration-200 flex flex-col h-full">
                 <div className="flex-grow">
                     <div className="flex justify-center overflow-hidden rounded-t-md">
                         <img

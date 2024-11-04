@@ -9,12 +9,12 @@ import { Input, Button, Logo, Loader } from './index';
 function Login() {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [error, setError] = useState('');
-    const [loading,setLoading] = useState(false)
+    const [loading,setLoading] = useState(false);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const login = async (data) => {
-        setLoading(true)
+        setLoading(true);
         setError('');
         try {
             const session = await appwriteAuthService.login(data);
@@ -22,7 +22,7 @@ function Login() {
                 const userData = await appwriteAuthService.checkCurrentUserStatus();
                 if (userData) {
                     dispatch(storelogin(userData));
-                    setLoading(false)
+                    setLoading(false);
                     navigate('/');
                 }
             }
@@ -33,11 +33,11 @@ function Login() {
     };
 
     return (
-        loading?<Loader/>:
-        <div className="flex items-center justify-center min-h-screen">
-            <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-2xl">
+        loading ? <Loader/> :
+        <div className="flex items-center justify-center min-h-screen ">
+            <div className="w-96 lg:w-96 max-w-md p-8 bg-white rounded-lg shadow-2xl">
                 <div className="flex justify-center">
-                    <Logo className="w-24" />
+                    <Logo className="w-36 mb-6" />
                 </div>
                 <h2 className="text-2xl font-bold text-center">Sign in to your account</h2>
                 <p className="mt-2 text-center text-gray-600">

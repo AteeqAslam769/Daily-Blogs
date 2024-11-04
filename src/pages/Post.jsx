@@ -44,8 +44,8 @@ export default function Post() {
     ) : post ? (
         <div className="py-12">
             <Container>
-                <div className="w-full flex flex-col items-center mb-8 relative shadow-md bg-white">
-                    <div className="w-full h-[600px] flex justify-center items-center overflow-hidden mb-6">
+                <div className="w-full flex flex-col items-center pb-8 relative bg-white">
+                    <div className="w-full h-[500px] flex justify-center items-center overflow-hidden mb-6">
                         {imageLoading && <Loader />}
                         <img
                             src={blogOperations.getFilePreview(post.featuredImage, 2000, 2000)}
@@ -71,10 +71,10 @@ export default function Post() {
                         </div>
                     )}
                 </div>
-                <div className="w-full mb-6">
+                <div className="w-full mb-6 px-6">
                     <h1 className="text-4xl font-extrabold mb-4">{post.title}</h1>
                 </div>
-                <div className="prose lg:prose-xl">
+                <div className="prose lg:prose-xl px-6">
                     {parse(post.content)}
                 </div>
             </Container>

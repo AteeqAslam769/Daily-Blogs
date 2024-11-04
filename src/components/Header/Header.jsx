@@ -16,18 +16,18 @@ function Header() {
     ];
 
     return (
-        <header className="relative py-3 shadow-lg bg-white z-10">
+        <header className="relative py-3 shadow-lg bg-gray-800 z-10 ">
             <nav className="container mx-auto flex items-center justify-between px-4">
                 <div className="flex items-center">
                     <NavLink to="/">
-                        <Logo className="ml-2 w-44 md:w-52" />
+                        <Logo color='white' className="ml-2 w-44 md:w-52" />
                     </NavLink>
                 </div>
 
                 <div className="md:hidden flex items-center">
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="text-gray-700 focus:outline-none ml-4"
+                        className="text-white focus:outline-none ml-4"
                     >
                         <svg
                             className="w-8 h-8"
@@ -54,7 +54,7 @@ function Header() {
                                     to={item.slug}
                                     className={({ isActive }) =>
                                         `block px-6 py-2 duration-200 rounded-full ${
-                                            isActive ? 'bg-gray-300 text-gray-900' : 'text-gray-700 hover:bg-gray-200'
+                                            isActive ? 'bg-gray-200 text-gray-900' : 'text-white hover:bg-gray-500'
                                         }`
                                     }
                                 >
@@ -71,15 +71,16 @@ function Header() {
                 </ul>
 
                 {isMobileMenuOpen && (
-                    <ul className="absolute top-16 right-0 left-0 bg-white shadow-md flex flex-col items-center space-y-2 py-4 md:hidden">
+                    <ul className="absolute top-14 right-0 left-0 bg-gray-500 shadow-md flex flex-col items-center space-y-2 py-4 md:hidden">
                         {navItems.map((item) =>
                             item.active ? (
                                 <li key={item.name}>
                                     <NavLink
+                                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                                         to={item.slug}
                                         className={({ isActive }) =>
                                             `block px-6 py-2 duration-200 rounded-full ${
-                                                isActive ? 'bg-gray-300 text-gray-900' : 'text-gray-700 hover:bg-gray-200'
+                                                isActive ? 'bg-gray-800 text-white' : 'text-white    hover:bg-gray-200'
                                             }`
                                         }
                                     >
